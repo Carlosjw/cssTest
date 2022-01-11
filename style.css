@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root
+{
+    --clr: #222327; /* cor que será passada como variável*/
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo */
+    min-height: 100vh; /* Alinha no meio da página */
+    background: var(--clr);
+}
+
+.navigation
+{
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul
+{
+    display: flex; /* coloca os itens na mesma linha*/
+    width: 350px; /* Organiza o ícone acima do nome*/
+}
+
+.navigation ul li
+{
+   position: relative;
+   list-style: none; /* elimina bolinha da lista*/
+   width: 70px;
+   height: 70px;
+   z-index: 1;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s; /* Suaviza a transição do ícone */
+    color: var(--clr) /* Cor do ícone*/
+}
+
+.navigation ul li.active a .icon
+{
+   transform: translateY(-35px); /* Joga ícones para cima quando o mouse passar por cima */
+}
+
+.navigation ul li a .text
+{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.05s;
+    opacity: 0; /* Texto invisível */
+    transform: translateY(20px);
+}
+
+.navigation ul li:hover a .text
+{
+    opacity: 1;    
+    transform: translateY(10px);
+
+}
+
+
+
